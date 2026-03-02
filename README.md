@@ -122,9 +122,10 @@ snakemake --profile profile_local/ -c1
 
 **DAG of the worflow**
 
-<!--![Alt text for the image](./question_5_personal_bonus_reproducible_workflow/dag.pdf)-->
 
-<img src="question_5_personal_bonus_reproducible_workflow/dag.png" width="600"/>
+<img width="797" height="786" alt="image" src="https://github.com/user-attachments/assets/026cf14e-8d69-4d08-936a-5a5f4aca5456" />
+
+
 
 &nbsp;
 ## How to Run
