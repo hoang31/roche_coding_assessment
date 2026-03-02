@@ -1,0 +1,37 @@
+========================================================================= 
+Log Path: ./log/01_create_ae_summary_table.log 
+Program Path: /home/hoangdongnguyen/ROCHE_CODING_ASSESSMENT/question_3_tlg/01_create_ae_summary_table.R 
+Working Directory: /home/hoangdongnguyen/ROCHE_CODING_ASSESSMENT/question_3_tlg 
+User Name: hoangdongnguyen 
+R Version: 4.3.3 (2024-02-29) 
+Machine: fedora x86_64 
+Operating System: Linux 6.18.8-100.fc42.x86_64 #1 SMP PREEMPT_DYNAMIC Fri Jan 30 19:22:23 UTC 2026 
+Base Packages: stats graphics grDevices utils datasets methods base 
+Other Packages: logr_1.3.9 common_1.1.5 
+Log Start Time: 2026-03-01 13:06:04.548256 
+========================================================================= 
+
+Warning: package ‘admiral’ was built under R version 4.4.1 
+
+NOTE: Log Print Time:  2026-03-01 13:06:05.485827 
+NOTE: Elapsed Time: 0.936707258224487 secs 
+
+Warning: package ‘gt’ was built under R version 4.4.1 
+
+NOTE: Log Print Time:  2026-03-01 13:06:05.601351 
+NOTE: Elapsed Time: 0.115524053573608 secs 
+
+Warning: package ‘pharmaverseraw’ was built under R version 4.4.1 
+
+NOTE: Log Print Time:  2026-03-01 13:06:05.697304 
+NOTE: Elapsed Time: 0.0959527492523193 secs 
+
+Warning: package ‘sdtm.oak’ was built under R version 4.4.1 
+
+NOTE: Log Print Time:  2026-03-01 13:06:05.710511 
+NOTE: Elapsed Time: 0.0132071971893311 secs 
+
+========================================================================= 
+Log End Time: 2026-03-01 13:06:12.176811 
+Log Elapsed Time: 0 00:00:07 
+========================================================================= 
