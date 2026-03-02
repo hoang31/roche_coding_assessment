@@ -58,8 +58,6 @@ ds <- assign_ct(
     ct_spec = study_ct,
     ct_clst = "C66727"
 )
-write_csv(ds, "SDTM_DS.csv")
-
 
 # Map the other variables
 ds <- ds %>%
@@ -235,7 +233,4 @@ ds <- ds %>%
     )
 
 write_csv(ds, "SDTM_DS_FINAL_RESULTS.csv")
-
-
-
 log_close()

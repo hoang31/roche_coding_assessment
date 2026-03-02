@@ -31,7 +31,7 @@ options(width=550)
 #' @param figure_path Path of the figure to be saved - string
 #'
 #' @return A ggplot object
-generate_ae_severity_barchart <- function(
+generate_ae_severity_table <- function(
     data_adae,
     data_adsl,
     figure_path

@@ -1,10 +1,11 @@
 # Roche Analytical Data Science Programmer - Coding Assessment
+
+&nbsp;
 ## Overview
 
 This repository contains the source code, logs, and outputs for the Roche Coding Assessment. The project focuses on transforming raw clinical data into CDISC-compliant SDTM and ADaM datasets and generating a clinical summary of Treatment-Emergent Adverse Events (TEAEs).
 
-
-
+&nbsp;
 ## Project Structure
 
 ```
@@ -39,32 +40,49 @@ This repository contains the source code, logs, and outputs for the Roche Coding
 │       └── 02_create_visualizations.msg
 └── README.md
 ```
-
+&nbsp;
 ## Key Technical Implementations
 #### 1. SDTM Mapping ({sdtm.oak})
 
-    Using the {sdtm.oak} package, we transformed the ds_raw dataset into the ds domain.
+Using the {sdtm.oak} package, we created the SDTM DS domain dataset. This includes:
+- Loading the ct, dm and ds_raw datasets from the {pharmaverseraw} package.
+- Using assign_ct(), asssign_no_ct(), asign_datetime(), etc, for controlled mapping of variables
+- Adding condition_add() if needed to mapping specific rows
+- Getting the VISIT information from INSTANCE and create a lookup table for VISITNUM (used derive_vars_merged)
 
-    Controlled Terminology: Handled non-conformant strings (e.g., "Randomized", "Screen Failure") by normalizing them to CDISC standards or mapping them to OTHER with details preserved in DSMODIFY.
+    Comments:
+    - would need to create an independant csv file for VISITNUM so we can update it wihtout having to update the code
+    - terminnology from DECOD were not present in the CT (Final Lab Visit, Final Retrieval Visit) - I would need to change these as OTHERS but keep DSTERM as it is for its traceability.
 
 
 #### 2. ADaM Derivations ({admiral})
 
-    TRTSDTM: Derived the first exposure date from the EX domain. Applied logic to impute missing time to 00:00:00 while ensuring the TRTSTMF (Imputation Flag) remained blank if only seconds were missing, per study specifications.
+Using mainly the {admiral} package, we created the ADaM datasets:
+- use derive_vars_cat() using lookup table to derive variables (AGEGR9)
+- derive_vars_dtm() to get variable from other domains to create adsl dataset
+- create event from specific domain dataset to use in conjonction with derive_vars_extreme_event() to create LSTAVLDT
 
-    LSTAVLDT: Built a "Last Known Alive" date by evaluating four distinct data sources (VS, AE, DS, and EX) using derive_vars_extreme_event().
-
+    Comments:
+    - needed to ampute the dates for AESTDTC from AE, since some of the dates were incomplete and cause NA generation when using derive_vars_extreme_event()
+    - lookup tables for AGEGR9 and AGEGR9N and ITTFL can be genereted as indepedent csv files
 
 #### 3. Clinical Reporting ({gtsummary} & {ggplot2})
 
-    TEAE Table: Generated an FDA-standard summary table sorted using gtsummary. Sort by frequencies AETERM and AESOC. 
+TEAE Table: Generated an FDA-standard summary table sorted using gtsummary. Sort by frequencies AETERM and AESOC. Implementation of the function generate_ae_severity_table().
 
-    Visualization: Developed a reusable {ggplot2} functions generates figures:
-    - AE Severity barchart for AE Severity distribution by treatment.
-    - AE Dot Plot for the Top 10 AEs, sorted by frequency.
+Visualization: Developed reusable {ggplot2} functions generates figures:
+- **generate_ae_severity_barchart()** : generate AE Severity barchart for AE Severity distribution by treatment.
+- **count_ae_freq()** : count AEs by treatment and AETERM and provide 95% CIs using the Exact Clopper-Pearson method for proportions.
+-  **generate_ae_frequency_dotplot()** : generate AE Dot Plot for the Top 10 AEs, sorted by frequency.
 
-    Incidence Analysis: Calculated 95% Confidence Intervals using the Exact Clopper-Pearson method for proportions and Poisson logic for incidence rates.
+    Comments:
+    - when running with terminal/Rscript cmd, the only way to generate the html file is to use the sink() function to redirect the output to a file - gtsave() does not work with my envs/terminal
 
+#### 4. Python projects - GenAI Clinical Data Assistant (LLM & LangChain)
+TBD/TODO
+
+
+&nbsp;
 ## How to Run
 
     Ensure you have R version 4.1+ installed.
@@ -82,12 +100,14 @@ This repository contains the source code, logs, and outputs for the Roche Coding
     Run the scripts in order (01 through 03). Check the logs/ folder to verify execution success.
     
 
+&nbsp;
 ## Exemple of execution
 ```{r}
 conda activate your_roche_r_env
 Rscript question_1_sdtm/01_create_ds_domain.R # this will create the SDTM_DS_FINAL_RESULTS.csv
 ```
 
+&nbsp;
 ## Compliance
 
 All code follows Pharmaverse best practices, focusing on traceability, modularity, and adherence to CDISC SDTM IG 3.4 and ADaM IG 1.3 standards.
