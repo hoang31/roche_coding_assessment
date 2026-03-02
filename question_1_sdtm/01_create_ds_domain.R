@@ -97,21 +97,17 @@ ds <- ds %>%
         tgt_val = "DISPOSITION EVENT",
         id_vars = oak_id_vars()
     ) %>%
-    assign_no_ct(
+    assign_ct(
         raw_dat = condition_add(
             ds_raw,
             !is.na(ds_raw$OTHERSP)
         ),
         raw_var = "OTHERSP",
         tgt_var = "DSDECOD",
-        #ct_spec = study_ct,
-        #ct_clst = "C66727",
+        ct_spec = study_ct,
+        ct_clst = "C66727",
         id_vars = oak_id_vars()
     ) %>%
-
-
-
-
     assign_no_ct(
         raw_dat = condition_add(
             ds_raw,
