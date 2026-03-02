@@ -8,30 +8,30 @@ Machine: fedora x86_64
 Operating System: Linux 6.18.8-100.fc42.x86_64 #1 SMP PREEMPT_DYNAMIC Fri Jan 30 19:22:23 UTC 2026 
 Base Packages: stats graphics grDevices utils datasets methods base 
 Other Packages: logr_1.3.9 common_1.1.5 
-Log Start Time: 2026-03-01 19:08:19.295845 
+Log Start Time: 2026-03-01 22:38:14.378712 
 ========================================================================= 
 
 Warning: package ‘admiral’ was built under R version 4.4.1 
 
-NOTE: Log Print Time:  2026-03-01 19:08:20.210176 
-NOTE: Elapsed Time: 0.913501024246216 secs 
+NOTE: Log Print Time:  2026-03-01 22:38:15.297716 
+NOTE: Elapsed Time: 0.91822361946106 secs 
 
 Warning: package ‘gt’ was built under R version 4.4.1 
 
-NOTE: Log Print Time:  2026-03-01 19:08:20.322596 
-NOTE: Elapsed Time: 0.112419366836548 secs 
+NOTE: Log Print Time:  2026-03-01 22:38:15.411521 
+NOTE: Elapsed Time: 0.113804340362549 secs 
 
 Warning: package ‘pharmaverseraw’ was built under R version 4.4.1 
 
-NOTE: Log Print Time:  2026-03-01 19:08:20.398376 
-NOTE: Elapsed Time: 0.075779914855957 secs 
+NOTE: Log Print Time:  2026-03-01 22:38:15.485576 
+NOTE: Elapsed Time: 0.0740551948547363 secs 
 
 Warning: package ‘sdtm.oak’ was built under R version 4.4.1 
 
-NOTE: Log Print Time:  2026-03-01 19:08:20.406151 
-NOTE: Elapsed Time: 0.00777506828308105 secs 
+NOTE: Log Print Time:  2026-03-01 22:38:15.493737 
+NOTE: Elapsed Time: 0.00816082954406738 secs 
 
 ========================================================================= 
-Log End Time: 2026-03-01 19:08:22.056652 
+Log End Time: 2026-03-01 22:38:16.956116 
 Log Elapsed Time: 0 00:00:02 
 ========================================================================= 

@@ -76,7 +76,7 @@ adae <- pharmaverseadam::adae
 adsl <- pharmaverseadam::adsl
 
 # generate the table
-table_ae <- generate_ae_severity_barchart(
+table_ae <- generate_ae_severity_table(
     data_adae = adae,
     data_adsl = adsl,
     figure_path = "./ae_table_treatment_emergent.html"
