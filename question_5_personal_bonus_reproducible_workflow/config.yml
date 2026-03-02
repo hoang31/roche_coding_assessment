@@ -1,0 +1,3 @@
+
+output_dir: "results"
+ct_file_path: "../question_1_sdtm/data/sdtm_ct.csv"

@@ -1,0 +1,50 @@
+
+
+"""
+    WORKFLOW FOR SDTM TO FIGURES
+"""
+
+##-----------------------------------------
+## Author information
+##-----------------------------------------
+
+
+__author__ = "Hoang Dong Nguyen"
+__email__ = "nguyen.hoangdong31@gmail.com"
+
+
+##-----------------------------------------
+## Import libraries
+##-----------------------------------------
+
+
+import os
+from pathlib import Path
+
+
+##-----------------------------------------
+## Import snakefiles
+##-----------------------------------------
+
+
+include: "rules/process.smk"
+
+
+##-----------------------------------------
+## Import snakefiles
+##-----------------------------------------
+
+
+rule all:
+	input:
+		"results/SDTM_DS_FINAL_RESULTS.csv",
+		"results/SDTM_ADSL_FINAL_RESULTS.csv",
+		"results/ae_severity_distribution_by_treatment.png",
+		"results/ae_table_treatment_emergent.html",
+		"results/ae_figure_dotplot_top_most_frequent_adverse_events.png",
+		"results/html_report.html"
+
+
+
+
+

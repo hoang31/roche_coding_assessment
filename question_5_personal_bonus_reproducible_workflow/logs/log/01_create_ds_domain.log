@@ -1,0 +1,44 @@
+========================================================================= 
+Log Path: logs/log/01_create_ds_domain.log 
+Program Path: /home/hoangdongnguyen/ROCHE_CODING_ASSESSMENT/question_5_personal_bonus_reproducible_workflow/.snakemake/scripts/tmpjc96rl9d.create_ds_domain.R 
+Working Directory: /home/hoangdongnguyen/ROCHE_CODING_ASSESSMENT/question_5_personal_bonus_reproducible_workflow 
+User Name: hoangdongnguyen 
+R Version: 4.3.3 (2024-02-29) 
+Machine: fedora x86_64 
+Operating System: Linux 6.18.8-100.fc42.x86_64 #1 SMP PREEMPT_DYNAMIC Fri Jan 30 19:22:23 UTC 2026 
+Base Packages: stats graphics grDevices utils datasets methods base 
+Other Packages: logr_1.3.9 common_1.1.5 
+Log Start Time: 2026-03-01 22:50:31.341662 
+========================================================================= 
+
+Warning: package ‘admiral’ was built under R version 4.4.1 
+
+NOTE: Log Print Time:  2026-03-01 22:50:32.226733 
+NOTE: Elapsed Time: 0.88430643081665 secs 
+
+Warning: package ‘gt’ was built under R version 4.4.1 
+
+NOTE: Log Print Time:  2026-03-01 22:50:32.330055 
+NOTE: Elapsed Time: 0.10332202911377 secs 
+
+Warning: package ‘pharmaverseraw’ was built under R version 4.4.1 
+
+NOTE: Log Print Time:  2026-03-01 22:50:32.401722 
+NOTE: Elapsed Time: 0.0716671943664551 secs 
+
+Warning: package ‘sdtm.oak’ was built under R version 4.4.1 
+
+NOTE: Log Print Time:  2026-03-01 22:50:32.412772 
+NOTE: Elapsed Time: 0.0110502243041992 secs 
+
+Error: no loop for break/next, jumping to top level 
+Traceback: 
+No traceback available 
+
+NOTE: Log Print Time:  2026-03-01 22:50:33.756938 
+NOTE: Elapsed Time: 1.34416556358337 secs 
+
+========================================================================= 
+Log End Time: 2026-03-01 22:50:33.757944 
+Log Elapsed Time: 0 00:00:02 
+========================================================================= 
