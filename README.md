@@ -1,9 +1,9 @@
-# SDTM and ADaM Datasets Analysis using R and pharmaverse R packages
+# SDTM and ADaM Datasets Analysis using R and Pharmaverse R packages
 
 &nbsp;
 ## Overview
 
-This repository contains the source code, logs, and outputs for the Roche Coding Assessment. The project focuses on transforming raw clinical data into CDISC-compliant SDTM and ADaM datasets and generating a clinical summary of Treatment-Emergent Adverse Events (TEAEs).
+This repository contains the source code, logs, and outputs. The project focuses on transforming raw clinical data into CDISC-compliant SDTM and ADaM datasets and generating a clinical summary of Treatment-Emergent Adverse Events (TEAEs).
 
 &nbsp;
 ## Project Structure
